@@ -1,0 +1,50 @@
+
+
+/* Container principal: define o tamanho e esconde o que vaza */
+.carousel {
+    position: relative;
+    max-width: 800px; /* Largura máxima do carrossel */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* A "fita" interna */
+.carousel-inner {
+    display: flex; /* Coloca as imagens lado a lado */
+    transition: transform 0.5s ease-in-out; /* Animação suave */
+}
+
+/* Cada slide individual */
+.slide {
+    min-width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Botões (Anterior e Próximo) */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
