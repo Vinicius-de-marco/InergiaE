@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIÁVEIS ================= */
+/* Variáveis globais de cores usadas em todo o site */
+:root {
+    --primary-yellow: #FFD700;
+    --dark-yellow: #E5C100;
+    --text-dark: #2c2c2c;
+    --text-light: #666;
+    --bg-light: #fafafa;
+    --white: #ffffff;
+}
+
+/* ================= BODY ================= */
+/* Estilo geral da página (fonte, cores e fundo) */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+/* ================= HEADER ================= */
+/* Cabeçalho do site: área superior fixa com logo e navegação */
+header {
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.6s ease-out;
+}
+
+/* Animação usada no header ao aparecer */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Container interno do header para alinhar conteúdo */
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ================= LOGO ================= */
+/* Imagem ou símbolo da marca */
+.logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* ================= NAV ================= */
+/* Menu de navegação com links para as páginas do site */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+}
+
+/* Links do menu de navegação */
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Linha animada abaixo do link */
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary-yellow);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-yellow);
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+/* Seção principal do site, usada como destaque inicial */
+.hero {
+    background: linear-gradient(135deg, var(--white) 0%, #fff9e6 100%);
+    padding: 120px 40px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fundo decorativo animado do hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,215,0,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: movePattern 20s linear infinite;
+}
+
+/* Animação do padrão de fundo */
+@keyframes movePattern {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50px); }
+}
+
+/* Título principal do hero */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 3px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Animação de entrada do texto */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtítulo do hero */
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+/* ================= FOOTER ================= */
+/* Rodapé do site: informações finais, direitos autorais etc. */
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: var(--white);
+    padding: 30px 40px;
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+}
+
+/* Linha decorativa no topo do rodapé */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--primary-yellow),
+        var(--dark-yellow),
+        var(--primary-yellow)
+    );
+}
+
+/* Texto do rodapé */
+footer p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVO ================= */
+/* Ajustes do layout para celulares e telas menores */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
