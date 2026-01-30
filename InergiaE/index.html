@@ -8,9 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <!-- ==================== HEADER (TOPO) ==================== -->
     <header>
         <div class="header-container">
-            <img src="img/logo.png" alt="Inergiae" class="logo">
+            <!-- Logo -->
+            <img src="img/logoH.png" alt="Inergiae" class="logo">
+            
+            <!-- Menu de Navegação -->
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -20,16 +25,279 @@
                     <li><a href="#">Contato</a></li>
                 </ul>
             </nav>
+
+            <!-- Redes Sociais e Idiomas -->
+            <div class="header-right">
+                <!-- Redes Sociais -->
+                <div class="social-links">
+                    <a href="https://pt-br.facebook.com/inergiae/" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCYiq8sJWfmzzhAZWe2D133w" target="_blank" title="YouTube">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                    </a>
+                </div>
+
+                <!-- Seletor de Idiomas -->
+                <div class="language-selector">
+                    <a href="#" class="active">PT</a>
+                    <a href="https://en.inergiae.net">EN</a>
+                    <a href="https://es.inergiae.net">ES</a>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- ==================== HERO (BANNER PRINCIPAL) ==================== -->
     <section class="hero">
-        <h1>FONTES CC</h1>
-        <p class="hero-subtitle">Conversores Estáticos de Alta Performance</p>
+        <h1>PRODUTOS</h1>
+        <p class="hero-subtitle">Soluções em Conversores Estáticos</p>
     </section>
 
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <div class="container">
+
+        <!-- Título da Seção -->
+        <h2 class="products-section-title">Nossos Produtos</h2>
+
+        <!-- ==================== CARROSSEL DE PRODUTOS ==================== -->
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                
+                <!-- ========== PRODUTO 1: REDUCI ========== -->
+                <article class="product-card">
+                    <div class="product-header">
+                        <h3>REDUCI</h3>
+                    </div>
+                    <div class="product-image">
+                        <div class="placeholder-image">Imagem do produto</div>
+                        <!-- Para adicionar imagem: <img src="img/reduci.png" alt="REDUCI"> -->
+                    </div>
+                    <div class="product-body">
+                        <p>As fontes da linha REDUCI são fontes de tensão CC que atingem até 10kV e potência até 200W.</p>
+                        <ul>
+                            <li>Operação simplificada, com controle de tensão somente;</li>
+                            <li>Indicação da tensão e corrente de saída;</li>
+                            <li>Proteção contra curto-circuito;</li>
+                            <li>Excelente estabilidade em uso contínuo;</li>
+                            <li>Gabinete em alumínio para maior durabilidade;</li>
+                        </ul>
+                        <div class="video-note">Vídeo em breve.</div>
+                        <a href="#" class="btn-contact">CONTATO</a>
+                    </div>
+                </article>
+
+                <!-- ========== PRODUTO 2: TRON ========== -->
+                <article class="product-card">
+                    <div class="product-header">
+                        <h3>TRON</h3>
+                    </div>
+                    <div class="product-image">
+                        <div class="placeholder-image">Imagem do produto</div>
+                    </div>
+                    <div class="product-body">
+                        <p>As fontes da linha TRON são fontes de alta tensão CC próprias para acionamento de válvulas Magnetron.</p>
+                        <ul>
+                            <li>Tensão máxima no ânodo 5200V;</li>
+                            <li>Corrente máxima no ânodo 1000mA;</li>
+                            <li>Potência média 3kW;</li>
+                            <li>Corrente máxima no filamento 20A;</li>
+                            <li>Controles individuais para tensão e corrente;</li>
+                            <li>Pré-aquecimento do filamento por 5s;</li>
+                            <li>Interface de comunicação RS-232 isolada;</li>
+                        </ul>
+                        <div class="video-note">Vídeo em breve.</div>
+                        <a href="#" class="btn-contact">CONTATO</a>
+                    </div>
+                </article>
+
+                <!-- ========== PRODUTO 3: ÁPIS ========== -->
+                <article class="product-card">
+                    <div class="product-header">
+                        <h3>ÁPIS</h3>
+                    </div>
+                    <div class="product-image">
+                        <div class="placeholder-image">Imagem do produto</div>
+                    </div>
+                    <div class="product-body">
+                        <p>As fontes da linha ÁPIS são fontes de alta tensão CC que atingem até 80kV e potência até 2kW.</p>
+                        <ul>
+                            <li>Modo de controle por tensão ou corrente;</li>
+                            <li>Interface de comunicação RS-232 isolada;</li>
+                            <li>Interfaces analógicas para regulagem;</li>
+                            <li>Gabinete em alumínio com aterramento;</li>
+                            <li>Gabinete próprio para rack 19", altura 4U;</li>
+                        </ul>
+                        <a href="#" class="btn-contact">CONTATO</a>
+                    </div>
+                </article>
+
+                <!-- ========== PRODUTO 4: GEN ========== -->
+                <article class="product-card">
+                    <div class="product-header">
+                        <h3>GEN</h3>
+                    </div>
+                    <div class="product-image">
+                        <div class="placeholder-image">Imagem do produto</div>
+                    </div>
+                    <div class="product-body">
+                        <p>As fontes da linha GEN são fontes de tensão CC que atingem até 10kV e potência até 2kW.</p>
+                        <ul>
+                            <li>Modo de controle de corrente;</li>
+                            <li>Interface de comunicação RS-232 isolada;</li>
+                            <li>Interfaces analógicas para regulagem;</li>
+                            <li>Gabinete próprio para rack 19";</li>
+                        </ul>
+                        <a href="#" class="btn-contact">CONTATO</a>
+                    </div>
+                </article>
+
+                <!-- ========== PRODUTO 5: QUIESCIS ========== -->
+                <article class="product-card">
+                    <div class="product-header">
+                        <h3>QUIESCIS</h3>
+                    </div>
+                    <div class="product-image">
+                        <div class="placeholder-image">Imagem do produto</div>
+                    </div>
+                    <div class="product-body">
+                        <p>As fontes da linha QUIESCIS são fontes de alta tensão CC que atingem até 40kV e potência até 200W.</p>
+                        <ul>
+                            <li>Operação simplificada;</li>
+                            <li>Indicação da tensão e corrente de saída;</li>
+                            <li>Proteção contra curto-circuito;</li>
+                            <li>Excelente estabilidade em uso contínuo;</li>
+                        </ul>
+                        <div class="video-note">vídeo</div>
+                        <a href="#" class="btn-contact">CONTATO</a>
+                    </div>
+                </article>
+
+                <!-- ========== PRODUTO 6: COLLIS ========== -->
+                <article class="product-card">
+                    <div class="product-header">
+                        <h3>COLLIS</h3>
+                    </div>
+                    <div class="product-image">
+                        <div class="placeholder-image">Imagem do produto</div>
+                    </div>
+                    <div class="product-body">
+                        <p>As fontes da linha COLLIS são fontes de tensão CC que atingem até 80kV e potência até 5kW.</p>
+                        <ul>
+                            <li>Alimentação trifásica;</li>
+                            <li>Modo de controle de corrente;</li>
+                            <li>Interface de comunicação RS‐232 isolada;</li>
+                            <li>Possibilidade de alteração da polaridade;</li>
+                        </ul>
+                        <div class="video-note">Vídeo em breve.</div>
+                        <a href="#" class="btn-contact">CONTATO</a>
+                    </div>
+                </article>
+
+                <!-- ========== PRODUTO 7: LASER HV ========== -->
+                <article class="product-card">
+                    <div class="product-header">
+                        <h3>LASER HV</h3>
+                    </div>
+                    <div class="product-image">
+                        <div class="placeholder-image">Imagens em breve</div>
+                    </div>
+                    <div class="product-body">
+                        <p>As fontes da linha LaserHV são fontes de tensão CC próprias para máquinas de corte Laser CO2.</p>
+                        <ul>
+                            <li>Tempo de resposta de 1ms;</li>
+                            <li>Corrente máxima de entrada 5A;</li>
+                            <li>Eficiência maior que 90%;</li>
+                            <li>Refrigeração forçada;</li>
+                        </ul>
+                        <div class="video-note">Vídeo em breve.</div>
+                        <a href="#" class="btn-contact">CONTATO</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Botões de Navegação do Carrossel -->
+            <div class="carousel-nav">
+                <button class="carousel-btn" onclick="moveCarousel(-1)">‹</button>
+                <button class="carousel-btn" onclick="moveCarousel(1)">›</button>
+            </div>
+
+            <!-- Pontos indicadores do Carrossel -->
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+
+    </div>
+
+    <!-- ==================== FOOTER (RODAPÉ) ==================== -->
     <footer>
-        <p>© 2025 Inergiae Conversores Estáticos. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Inergiae" class="footer-logo-img">
+            </div>
+            <div class="footer-info">
+                <p>Rod. José Carlos Daux, 600, Ed. CELTA, Sala 3.12</p>
+                <p>Bairro João Paulo, Florianópolis-SC</p>
+                <p>Fone: (48) 3024 1906 (WhatsApp)</p>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Inergiae Conversores Estáticos. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- ==================== JAVASCRIPT DO CARROSSEL ==================== -->
+    <script>
+        // Variáveis do carrossel
+        let currentPosition = 0;
+        const track = document.getElementById('carouselTrack');
+        const cards = document.querySelectorAll('.product-card');
+        const dotsContainer = document.getElementById('carouselDots');
+        const cardWidth = 360; // Largura do card + espaço
+
+        // Criar os pontos (dots) do carrossel
+        cards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (index === 0) dot.classList.add('active');
+            dot.onclick = () => goToSlide(index);
+            dotsContainer.appendChild(dot);
+        });
+
+        // Atualizar pontos ativos
+        function updateDots() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPosition);
+            });
+        }
+
+        // Mover carrossel (chamado pelos botões ‹ e ›)
+        function moveCarousel(direction) {
+            const maxPosition = cards.length - Math.floor(window.innerWidth / cardWidth);
+            currentPosition += direction;
+            
+            if (currentPosition < 0) currentPosition = 0;
+            if (currentPosition > maxPosition) currentPosition = maxPosition;
+            
+            track.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+            updateDots();
+        }
+
+        // Ir para um slide específico (chamado pelos dots)
+        function goToSlide(index) {
+            currentPosition = index;
+            track.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+            updateDots();
+        }
+
+        // Auto-play: muda automaticamente a cada 5 segundos
+        setInterval(() => {
+            const maxPosition = cards.length - Math.floor(window.innerWidth / cardWidth);
+            currentPosition++;
+            if (currentPosition > maxPosition) currentPosition = 0;
+            track.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+            updateDots();
+        }, 6000);
+    </script>
 </body>
 </html>
