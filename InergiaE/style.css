@@ -536,3 +536,7 @@ footer::before {
         padding: 40px 20px;
     }
 }
+
+img {
+    width: 250px;
+}
