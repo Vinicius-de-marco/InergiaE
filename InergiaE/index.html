@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inergiae Conversores Estáticos</title>
+    <title>Inergiae Conversores Estáticos - Soluções em Alta Tecnologia</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -50,75 +50,201 @@
 
     <!-- ==================== HERO (BANNER PRINCIPAL) ==================== -->
     <section class="hero">
-        <h1>PRODUTOS</h1>
-        <p class="hero-subtitle">Soluções em Conversores Estáticos</p>
+        <h1>CONVERSORES ESTÁTICOS</h1>
+        <p class="hero-subtitle">Tecnologia de Ponta em Fontes de Alimentação</p>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">80kV</span>
+                <span class="stat-label">Máxima Tensão</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5kW</span>
+                <span class="stat-label">Máxima Potência</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Anos de Experiência</span>
+            </div>
+        </div>
     </section>
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
     <div class="container">
 
-        <!-- Título da Seção -->
-        <h2 class="products-section-title">Nossos Produtos</h2>
-
-        <!-- ==================== CARROSSEL DE PRODUTOS ==================== -->
-        <div class="carousel-container">
-            <div class="carousel-track" id="carouselTrack">
-                
-                <!-- ========== CATEGORIA 1 ========== -->
-                <article class="product-card">
-                    <div class="product-header">
-                        <h3>Fontes CC</h3>
-                    </div>
-                    <div class="product-image">
-                        <img src="img/Reduci_SV900-removebg-preview.png" alt="reduci">
-                    </div>
-                    <div class="product-body">
-                        <p>fontes de alimentação que fornecem tensão Contínua, ou seja, produzem fluxo de corrente em somente uma direção. Em contraste, as fontes de tensão CA (“corrente alternada”) produzem corrente cujo fluxo se alterna com o passar do tempo.</p>
-                        <div class="video-note">Vídeo em breve.</div>
-                        <a href="#" class="btn-contact">CONTATO</a>
-                    </div>
-                </article>
-
-                <!-- ========== CATEGORIA 2 ========== -->
-                <article class="product-card">
-                    <div class="product-header">
-                        <h3>Fontes CA</h3>
-                    </div>
-                    <div class="product-image">
-                        <img src="img/fontepulsada.png" alt="CA">
-                    </div>
-                    <div class="product-body">
-                        <p> são dispositivos eletrônicos capazes de gerar uma corrente com direção alternada entre seus polos, produzindo um fluxo de elétrons oscilatório através do tempo dentro do condutor.</p>
-                        <div class="video-note">Vídeo em breve.</div>
-                        <a href="#" class="btn-contact">CONTATO</a>
-                    </div>
-                </article>
-
-                <!-- ========== CATEGORIA 3 ========== -->
-                <article class="product-card">
-                    <div class="product-header">
-                        <h3>Reatores de Plasma</h3>
-                    </div>
-                    <div class="product-image">
-                        <img src="img/inergiae-o-que-e-plasma-800x450-1.jpg" alt="plasma">
-                    </div>
-                    <div class="product-body">
-                        <p>O Plasma é um gás ionizado, ou seja, um gás onde uma parte significativa de suas moléculas não está em equilíbrio elétrico. Isto significa que existem íons (positivos ou negativos) e também elétrons livres dentro do gás</p>
-                        <a href="#" class="btn-contact">CONTATO</a>
-                    </div>
-                </article>
-
-                
-
-            <!-- Botões de Navegação do Carrossel -->
-            <div class="carousel-nav">
-                <button class="carousel-btn" onclick="moveCarousel(-1)">‹</button>
-                <button class="carousel-btn" onclick="moveCarousel(1)">›</button>
-            </div>
-
-            <!-- Pontos indicadores do Carrossel -->
-            <div class="carousel-dots" id="carouselDots"></div>
+        <!-- Introdução -->
+        <div class="intro-section">
+            <h2>Soluções Personalizadas em Conversores de Potência</h2>
+            <p>Desenvolvemos fontes de alimentação de alta performance para aplicações industriais e científicas. De baixa tensão e alta corrente (300A) até altíssima tensão (80kV), oferecemos soluções customizadas para suas necessidades específicas.</p>
         </div>
+
+        <!-- Título da Seção -->
+        <h2 class="products-section-title">Nossas Categorias de Produtos</h2>
+
+        <!-- ==================== GRID DE CATEGORIAS ==================== -->
+        <div class="categories-grid">
+            
+            <!-- ========== CATEGORIA 1: FONTES CC ========== -->
+            <article class="category-card">
+                <div class="category-badge">
+                    <span>ESPECIALIDADE</span>
+                </div>
+                <div class="category-header">
+                    <h3>Fontes CC</h3>
+                    <p class="category-subtitle">Corrente Contínua</p>
+                </div>
+                <div class="category-image">
+                    <img src="img/Reduci_SV900-removebg-preview.png" alt="Fontes CC">
+                </div>
+                <div class="category-body">
+                    <p>Fontes de alimentação que fornecem tensão contínua, produzindo fluxo de corrente em somente uma direção. Ideais para processos industriais que exigem estabilidade e precisão.</p>
+                    
+                    <div class="tech-specs">
+                        <h4>Aplicações:</h4>
+                        <div class="specs-list">
+                            <span class="spec-tag">Eletrólise</span>
+                            <span class="spec-tag">Eletrodeposição</span>
+                            <span class="spec-tag">Eletroforese</span>
+                            <span class="spec-tag">Raio-X</span>
+                            <span class="spec-tag">Laser</span>
+                            <span class="spec-tag">Plasma</span>
+                        </div>
+                    </div>
+
+                    <div class="category-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">⚡</span>
+                            <span>Até 80kV</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔋</span>
+                            <span>Até 300A</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📊</span>
+                            <span>Alta Estabilidade</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-explore">EXPLORAR PRODUTOS</a>
+                </div>
+            </article>
+
+            <!-- ========== CATEGORIA 2: FONTES CA ========== -->
+            <article class="category-card">
+                <div class="category-badge highlight">
+                    <span>ALTA PERFORMANCE</span>
+                </div>
+                <div class="category-header">
+                    <h3>Fontes CA / Pulsadas</h3>
+                    <p class="category-subtitle">Corrente Alternada</p>
+                </div>
+                <div class="category-image">
+                    <img src="img/fontepulsada.png" alt="Fontes CA">
+                </div>
+                <div class="category-body">
+                    <p>Dispositivos eletrônicos capazes de gerar corrente com direção alternada entre seus polos, produzindo um fluxo de elétrons oscilatório através do tempo dentro do condutor.</p>
+                    
+                    <div class="tech-specs">
+                        <h4>Aplicações:</h4>
+                        <div class="specs-list">
+                            <span class="spec-tag">Tratamento de Superfície</span>
+                            <span class="spec-tag">Plasma DBD</span>
+                            <span class="spec-tag">Ozonização</span>
+                            <span class="spec-tag">Processos Químicos</span>
+                        </div>
+                    </div>
+
+                    <div class="category-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">⚡</span>
+                            <span>Alta Frequência</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <span>Pulsos Precisos</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">⚙️</span>
+                            <span>Customizável</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-explore">EXPLORAR PRODUTOS</a>
+                </div>
+            </article>
+
+            <!-- ========== CATEGORIA 3: REATORES DE PLASMA ========== -->
+            <article class="category-card">
+                <div class="category-badge">
+                    <span>TECNOLOGIA AVANÇADA</span>
+                </div>
+                <div class="category-header">
+                    <h3>Reatores de Plasma</h3>
+                    <p class="category-subtitle">Tecnologia de Plasma</p>
+                </div>
+                <div class="category-image">
+                    <img src="img/inergiae-o-que-e-plasma-800x450-1.jpg" alt="Reatores de Plasma">
+                </div>
+                <div class="category-body">
+                    <p>Plasma é um gás ionizado onde uma parte significativa de suas moléculas não está em equilíbrio elétrico. Nossos reatores permitem controle preciso para diversas aplicações científicas e industriais.</p>
+                    
+                    <div class="tech-specs">
+                        <h4>Aplicações:</h4>
+                        <div class="specs-list">
+                            <span class="spec-tag">Modificação de Superfície</span>
+                            <span class="spec-tag">Nanomateriais</span>
+                            <span class="spec-tag">Limpeza por Plasma</span>
+                            <span class="spec-tag">Deposição</span>
+                        </div>
+                    </div>
+
+                    <div class="category-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🔬</span>
+                            <span>Controle Preciso</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌡️</span>
+                            <span>Baixa Temperatura</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💡</span>
+                            <span>Eco-Friendly</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-explore">EXPLORAR PRODUTOS</a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- ==================== SEÇÃO DE DIFERENCIAIS ==================== -->
+        <section class="differentials-section">
+            <h2>Por que escolher a Inergiae?</h2>
+            <div class="differentials-grid">
+                <div class="differential-card">
+                    <div class="differential-icon">🎯</div>
+                    <h3>Customização Total</h3>
+                    <p>Desenvolvemos soluções sob medida para suas necessidades específicas</p>
+                </div>
+                <div class="differential-card">
+                    <div class="differential-icon">🔧</div>
+                    <h3>Suporte Técnico</h3>
+                    <p>Equipe especializada para auxiliar em todas as etapas do projeto</p>
+                </div>
+                <div class="differential-card">
+                    <div class="differential-icon">⚙️</div>
+                    <h3>Qualidade Garantida</h3>
+                    <p>Produtos testados e certificados com alta durabilidade</p>
+                </div>
+                <div class="differential-card">
+                    <div class="differential-icon">🚀</div>
+                    <h3>Tecnologia Nacional</h3>
+                    <p>Desenvolvimento e fabricação 100% brasileira</p>
+                </div>
+            </div>
+        </section>
 
     </div>
 
@@ -129,9 +255,9 @@
                 <img src="img/logo.png" alt="Inergiae" class="footer-logo-img">
             </div>
             <div class="footer-info">
-                <p>Rod. José Carlos Daux, 600, Ed. CELTA, Sala 3.12</p>
+                <p><strong>📍 Endereço:</strong> Rod. José Carlos Daux, 600, Ed. CELTA, Sala 3.12</p>
                 <p>Bairro João Paulo, Florianópolis-SC</p>
-                <p>Fone: (48) 3024 1906 (WhatsApp)</p>
+                <p><strong>📞 Contato:</strong> (48) 3024 1906 (WhatsApp)</p>
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Inergiae Conversores Estáticos. Todos os direitos reservados.</p>
@@ -139,8 +265,5 @@
         </div>
     </footer>
 
-
-   <script src="carrossel.js"></script>
- 
 </body>
 </html>
