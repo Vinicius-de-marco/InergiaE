@@ -1,0 +1,520 @@
+.hero-empresa {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 50%, rgba(255,215,0,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255,215,0,0.1) 0%, transparent 50%);
+}
+
+.hero-content-empresa {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-yellow);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.badge-label {
+    font-size: 14px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Títulos de seção */
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-yellow);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 60px;
+}
+
+/* Missão e Visão */
+.mission-vision-section {
+    margin: 80px 0;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.mission-card {
+    background: var(--white);
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-yellow), var(--dark-yellow));
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255,215,0,0.2);
+}
+
+.mission-icon {
+    font-size: 64px;
+    margin-bottom: 25px;
+}
+
+.mission-card h3 {
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.mission-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* Timeline */
+.timeline-section {
+    margin: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 60px;
+    border-radius: 30px;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-yellow), var(--dark-yellow));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 120px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+    z-index: 2;
+}
+
+.timeline-content-box {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--primary-yellow);
+}
+
+.timeline-content-box h3 {
+    font-size: 22px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.timeline-content-box p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.timeline-image {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.timeline-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Diferenciais */
+.company-differentials {
+    margin: 100px 0;
+}
+
+.differentials-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+}
+
+.differential-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.differential-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-yellow), var(--dark-yellow));
+}
+
+.differential-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255,215,0,0.3);
+}
+
+.diff-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 72px;
+    font-weight: 900;
+    color: rgba(255,215,0,0.1);
+    font-family: 'Playfair Display', serif;
+}
+
+.differential-box h3 {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.differential-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* Aplicações - Nova versão */
+.applications-section-new {
+    margin: 100px 0;
+    background: var(--white);
+    padding: 80px 60px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.applications-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.app-category {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 35px;
+    border-radius: 15px;
+    border-top: 4px solid var(--primary-yellow);
+    transition: all 0.3s ease;
+}
+
+.app-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.app-category h3 {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.app-list {
+    list-style: none;
+}
+
+.app-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.app-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+/* Depoimentos - Nova versão */
+.testimonials-section-new {
+    margin: 100px 0;
+}
+
+.testimonials-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.testimonial-card-new {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.testimonial-card-new.featured {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+    border: 3px solid var(--primary-yellow);
+    padding: 50px;
+}
+
+.quote-icon {
+    font-size: 120px;
+    line-height: 1;
+    color: var(--primary-yellow);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    margin-bottom: -60px;
+}
+
+.quote-icon-small {
+    font-size: 60px;
+    line-height: 1;
+    color: var(--primary-yellow);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    margin-bottom: -30px;
+}
+
+.testimonial-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonials-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card-new p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.testimonial-author h4 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.testimonial-author p {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: normal;
+}
+
+.testimonial-link {
+    color: var(--primary-yellow);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.testimonial-link:hover {
+    color: var(--dark-yellow);
+    text-decoration: underline;
+}
+
+/* Parceiros - Nova versão */
+.partners-section-new {
+    margin: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 60px;
+    border-radius: 30px;
+}
+
+.partners-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 35px;
+    align-items: center;
+}
+
+.partner-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.partner-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(255,215,0,0.25);
+}
+
+.partner-item img {
+    max-width: 100%;
+    max-height: 90px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.partner-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* CTA Final */
+.cta-section {
+    margin: 100px 0;
+    background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--dark-yellow) 100%);
+    padding: 80px 60px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 18px 50px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}

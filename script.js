@@ -1,5 +1,3 @@
-/* Copie e cole dentro de uma tag <script> antes de fechar o </body> */
-
 let index = 0; // Começa no primeiro slide (índice 0)
 
 function mudarSlide(direcao) {
