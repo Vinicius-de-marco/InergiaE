@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Solar - Catálogo</title>
+    <link rel="stylesheet" href="categoria.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">Loja<span>Solar</span></div>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar produtos..." onkeyup="filterProducts()">
+        </div>
+
+    </header>
+
+    <div class="hero">
+        <h1>Reatores de Plasma</h1>
+    </div>
+
+    <div class="container">
+        <div class="product-grid" id="catalog">
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/FFD700/333?text=Fone+Premium" alt="Fone de Ouvido">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Linha Matrix</h3>
+                    <button class="btn-buy" onclick="addToCart()">Contato</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/FFF9C4/333?text=Tenis+Runner" alt="Tênis">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Tênis Yellow Run</h3>
+                    <button class="btn-buy" onclick="addToCart()">Contato</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/FBC02D/fff?text=Relogio+Smart" alt="Relógio">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Smartwatch Gold</h3>
+                    <button class="btn-buy" onclick="addToCart()">Contato</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/333/FFD700?text=Mochila" alt="Mochila">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Mochila Urbana</h3>
+                    <button class="btn-buy" onclick="addToCart()">Contato</button>
+                </div>
+            </div>
+            
+             <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/FFCC00/333?text=Camera+Pro" alt="Camera">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Câmera Sunny 4K</h3>
+                    <button class="btn-buy" onclick="addToCart()">Contato</button>
+                </div>
+            </div>
+
+             <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/eee/333?text=Luminaria" alt="Luminaria">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Luminária de Mesa</h3>
+                    <button class="btn-buy" onclick="addToCart()">Contato</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <span>energiae</span>. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
