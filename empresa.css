@@ -13,9 +13,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 30% 50%, rgba(255,215,0,0.15) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(255,215,0,0.1) 0%, transparent 50%);
+    background:
+        radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
 }
 
 .hero-content-empresa {
@@ -95,7 +95,7 @@
     padding: 50px 40px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -113,7 +113,7 @@
 
 .mission-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(255,215,0,0.2);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
 }
 
 .mission-icon {
@@ -178,7 +178,7 @@
     font-size: 24px;
     font-weight: 700;
     color: var(--text-dark);
-    box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
     z-index: 2;
 }
 
@@ -186,7 +186,7 @@
     background: var(--white);
     padding: 35px;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     border-left: 4px solid var(--primary-yellow);
 }
 
@@ -230,7 +230,7 @@
     background: var(--white);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -248,7 +248,7 @@
 
 .differential-box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(255,215,0,0.3);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
 }
 
 .diff-number {
@@ -257,7 +257,7 @@
     right: 20px;
     font-size: 72px;
     font-weight: 900;
-    color: rgba(255,215,0,0.1);
+    color: rgba(255, 215, 0, 0.1);
     font-family: 'Playfair Display', serif;
 }
 
@@ -280,7 +280,7 @@
     background: var(--white);
     padding: 80px 60px;
     border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .applications-categories {
@@ -299,7 +299,7 @@
 
 .app-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .app-category h3 {
@@ -345,17 +345,18 @@
     background: var(--white);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     position: relative;
     transition: all 0.3s ease;
 }
 
 .testimonial-card-new:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .testimonial-card-new.featured {
+    position: relative;
     background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
     border: 3px solid var(--primary-yellow);
     padding: 50px;
@@ -368,6 +369,16 @@
     opacity: 0.3;
     font-family: Georgia, serif;
     margin-bottom: -60px;
+}
+
+.quote-icon-end {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    margin: 0;
+    font-size: 80px;
+    opacity: 0.25;
+    transform: rotate(180deg);
 }
 
 .quote-icon-small {
@@ -454,12 +465,12 @@
     justify-content: center;
     min-height: 150px;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
 }
 
 .partner-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(255,215,0,0.25);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.25);
 }
 
 .partner-item img {
@@ -511,10 +522,10 @@
     letter-spacing: 2px;
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .btn-cta:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
