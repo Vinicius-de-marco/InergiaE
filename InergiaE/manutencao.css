@@ -1,0 +1,118 @@
+.manutencao-page {
+    min-height: calc(100vh - 270px);
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #1f1f1f 0%, #2d2d2d 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manutencao-page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 40%, rgba(255, 215, 0, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.12) 0%, transparent 45%);
+}
+
+.manutencao-card {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 48px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    text-align: center;
+}
+
+.manutencao-label {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+}
+
+.manutencao-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: var(--text-dark);
+    margin-bottom: 14px;
+}
+
+.manutencao-card p {
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.manutencao-note {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.manutencao-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 14px 22px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+    color: var(--text-dark);
+}
+
+.btn-secondary {
+    border: 2px solid var(--text-dark);
+    color: var(--text-dark);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .manutencao-page {
+        min-height: auto;
+        padding: 50px 16px;
+    }
+
+    .manutencao-card {
+        padding: 28px 20px;
+    }
+
+    .manutencao-card h1 {
+        font-size: 33px;
+    }
+
+    .manutencao-card p {
+        font-size: 15px;
+    }
+}
