@@ -1,26 +1,59 @@
-let index = 0; // Começa no primeiro slide (índice 0)
+(() => {
+    const MOBILE_BREAKPOINT = 768;
+    const header = document.querySelector("header");
+    const nav = header ? header.querySelector("nav") : null;
+    const menuToggle = header ? header.querySelector(".menu-toggle") : null;
 
-function mudarSlide(direcao) {
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-    
-    // Atualiza o índice
-    index = index + direcao;
-
-    // Lógica de loop (Carrossel infinito)
-    if (index >= totalSlides) {
-        index = 0; // Volta para o primeiro se passar do último
-    } else if (index < 0) {
-        index = totalSlides - 1; // Vai para o último se voltar do primeiro
+    if (!header || !nav || !menuToggle) {
+        return;
     }
 
-    // Move a "fita" de slides
-    // Ex: Se index for 1, move -100%. Se for 2, move -200%.
-    const offset = -index * 100; 
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-}
+    document.body.classList.add("menu-enhanced");
 
-// Opcional: Auto-play (muda sozinho a cada 3 segundos)
-setInterval(() => {
-    mudarSlide(1);
-}, 3000);
+    const closeMenu = () => {
+        nav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+    };
+
+    const openMenu = () => {
+        nav.classList.add("is-open");
+        menuToggle.setAttribute("aria-expanded", "true");
+    };
+
+    const toggleMenu = () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        if (expanded) {
+            closeMenu();
+            return;
+        }
+        openMenu();
+    };
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (window.innerWidth > MOBILE_BREAKPOINT) {
+            return;
+        }
+
+        if (!header.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > MOBILE_BREAKPOINT) {
+            closeMenu();
+        }
+    });
+})();

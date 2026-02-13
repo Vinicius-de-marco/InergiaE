@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../artigos.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     
@@ -14,7 +15,14 @@
         <div class="header-container">
             <img src="../img/logoH.png" alt="Inergiae" class="logo">
             
-            <nav>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"
+                aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-menu">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../empresa.html">Empresa</a></li>

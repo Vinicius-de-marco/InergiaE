@@ -124,10 +124,49 @@
     }
 
     .category-nav-card {
-        padding: 28px 20px;
+        padding: 22px 18px;
+    }
+
+    .category-nav-icon {
+        display: none;
     }
 
     .category-nav-name {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-nav-produtos {
+        margin-bottom: 36px;
+    }
+
+    .category-nav-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+
+    .category-nav-grid {
+        gap: 12px;
+    }
+
+    .category-nav-card {
+        padding: 20px 14px;
+        border-radius: 16px;
+    }
+
+    .category-nav-name {
+        font-size: 18px;
+    }
+
+    .category-nav-desc {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .category-nav-arrow {
+        font-size: 11px;
+        letter-spacing: 1px;
     }
 }

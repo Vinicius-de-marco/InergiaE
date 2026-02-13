@@ -6,6 +6,7 @@
     <title>Reatores de Plasma - Inergiae</title>
     <link rel="stylesheet" href="categoria.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     
@@ -13,7 +14,14 @@
         <div class="header-container">
             <a href="../index.html" aria-label="Início"><img src="../img/logoH.png" alt="Inergiae" class="logo"></a>
             
-            <nav>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"
+                aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-menu">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../empresa.html">Empresa</a></li>
@@ -78,7 +86,7 @@
             
             <div class="product-item">
                 <div class="product-img">
-                    <img src="../img/inergiae-o-que-e-plasma-800x450-1.jpg" alt="Reator DBD">
+                    <img src="../img/plasma.jpg" alt="Reator DBD">
                     <span class="tag">DBD</span>
                 </div>
                 <div class="product-body">
@@ -106,7 +114,7 @@
 
             <div class="product-item">
                 <div class="product-img">
-                    <div class="placeholder">Imagem em breve</div>
+                    <img src="../img/plasma.jpg" alt="Reator PECVD">
                     <span class="tag">Vácuo</span>
                 </div>
                 <div class="product-body">
@@ -133,7 +141,7 @@
 
             <div class="product-item">
                 <div class="product-img">
-                    <div class="placeholder">Imagem em breve</div>
+                    <img src="../img/plasma.jpg" alt="Reator Customizado">
                     <span class="tag">Custom</span>
                 </div>
                 <div class="product-body">

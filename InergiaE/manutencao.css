@@ -116,3 +116,43 @@
         font-size: 15px;
     }
 }
+
+@media (max-width: 480px) {
+    .manutencao-page {
+        padding: 40px 12px;
+    }
+
+    .manutencao-card {
+        border-radius: 16px;
+        padding: 22px 14px;
+    }
+
+    .manutencao-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 6px 12px;
+        margin-bottom: 18px;
+    }
+
+    .manutencao-card h1 {
+        font-size: 28px;
+    }
+
+    .manutencao-card p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .manutencao-actions {
+        margin-top: 22px;
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 11px;
+        text-align: center;
+    }
+}
