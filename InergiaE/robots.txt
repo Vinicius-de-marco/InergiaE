@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /manutencao-en.html
+Disallow: /manutencao-es.html
+
+Sitemap: https://inergiae.net/sitemap.xml

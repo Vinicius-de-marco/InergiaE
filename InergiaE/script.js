@@ -57,3 +57,42 @@
         }
     });
 })();
+
+(() => {
+    const params = new URLSearchParams(window.location.search);
+    const produtoParam = params.get("produto");
+    const categoriaParam = params.get("categoria");
+    const form = document.querySelector(".contact-form");
+    const produtoInput = document.querySelector("#produto");
+    const mensagemInput = document.querySelector("#mensagem");
+    const heading = document.querySelector(".contact-form-card h2");
+
+    if (!form || !produtoInput || !mensagemInput || !produtoParam) {
+        return;
+    }
+
+    const produto = produtoParam.trim();
+    const categoria = categoriaParam ? categoriaParam.trim() : "";
+
+    if (!produto) {
+        return;
+    }
+
+    produtoInput.value = produto;
+
+    if (!mensagemInput.value.trim()) {
+        const linhas = [
+            `Olá, gostaria de solicitar um orçamento para o produto ${produto}.`,
+            categoria ? `Categoria: ${categoria}.` : "",
+            "",
+            "Aplicação:",
+            "Faixa de tensão/corrente desejada:",
+            "Prazo estimado:"
+        ].filter(Boolean);
+        mensagemInput.value = linhas.join("\n");
+    }
+
+    if (heading) {
+        heading.textContent = `Solicite um orçamento - ${produto}`;
+    }
+})();

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">LASER HV - Imagens em breve</title>
+  <desc id="desc">Placeholder para o produto LASER HV sem imagem oficial disponível.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#101c2c" />
+      <stop offset="100%" stop-color="#214169" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg)" />
+  <g fill="#d9e6f7" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="450" y="270" font-size="62" font-weight="700">LASER HV</text>
+    <text x="450" y="335" font-size="38">Imagens em breve</text>
+  </g>
+</svg>
