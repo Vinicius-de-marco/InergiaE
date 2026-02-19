@@ -4,4 +4,4 @@ Allow: /
 Disallow: /manutencao-en.html
 Disallow: /manutencao-es.html
 
-Sitemap: https://inergiae.net/sitemap.xml
+Sitemap: https://inergiae.com.br/sitemap.xml
