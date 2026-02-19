@@ -1314,7 +1314,7 @@ footer::before {
 /* ==================== RESPONSIVO ==================== */
 @media (max-width: 1200px) {
     .header-container {
-        padding: 24px 28px;
+        padding: 24px 28px 24px 48px;
         gap: 28px;
     }
 
@@ -1362,7 +1362,7 @@ footer::before {
 
 @media (max-width: 992px) {
     .header-container {
-        padding: 20px 24px;
+        padding: 20px 24px 20px 48px;
         gap: 20px;
     }
 
