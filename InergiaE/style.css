@@ -59,6 +59,7 @@ header {
 .logo {
     height: 58px;
     width: auto;
+    margin-left: -250px;
     transition: transform 0.3s ease;
     cursor: pointer;
     display: block;
@@ -1441,7 +1442,8 @@ footer::before {
 
     .logo {
         height: 44px;
-        margin: 0 auto;
+        margin-left: -250px;
+        margin-right: 0;
     }
 
     nav {
@@ -1505,7 +1507,8 @@ footer::before {
 
     .menu-enhanced .logo {
         height: 40px;
-        margin: 0;
+        margin-left: -250px;
+        margin-right: 0;
     }
 
     .menu-enhanced .menu-toggle {
