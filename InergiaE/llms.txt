@@ -1,0 +1,78 @@
+User-agent: *
+Allow: /
+
+# Inergiae Conversores Estaticos
+> Canonical LLM index for https://inergiae.com.br/
+
+
+# Inergiae Conversores Estaticos
+> Canonical LLM index for https://inergiae.net/
+
+Inergiae develops static converters, high-voltage power supplies, pulsed AC supplies, and plasma reactors for industrial and scientific applications.
+This file defines preferred sources, current product lineup, and citation guidance for LLM systems.
+
+Last updated: 2026-02-19
+Primary language: pt-BR
+
+## Canonical Domain
+- https://inergiae.net/
+
+## Source Priority
+1. Product catalog and category pages (most authoritative for lineup and specifications)
+2. Blog index and local blog article pages
+3. Contact page for commercial/support details
+
+## Current Product Lineup
+- Fontes CC: REDUCI, TRON, APIS, GEN, QUIESCIS, COLLIS, LASER HV
+- Fontes CA/Pulsadas: ALTERNIS, DRUM
+- Reatores de Plasma: MATRIX
+
+## Key Pages
+- [Home](https://inergiae.net/)
+- [Empresa](https://inergiae.net/empresa.html)
+- [Produtos](https://inergiae.net/produtos.html)
+- [Categoria Fontes CC](https://inergiae.net/categorias/CC.html)
+- [Categoria Fontes CA/Pulsadas](https://inergiae.net/categorias/CA.html)
+- [Categoria Reatores de Plasma](https://inergiae.net/categorias/plasma.html)
+- [Blog](https://inergiae.net/blog.html)
+- [Contato](https://inergiae.net/contato.html)
+
+## Blog Articles
+- [Parceria entre a Inergiae e o INEP/UFSC no desenvolvimento de um conversor solar nacional](https://inergiae.net/blog/parceria-entre-a-inergiae-e-o-inep-ufsc-no-desenvolvimento-de-um-conversor-solar-nacional.html)
+- [Maquina de eletrofiacao de grande capacidade](https://inergiae.net/blog/maquina-de-eletrofiacao-de-grande-capacidade.html)
+- [Energia vinda dos ventos](https://inergiae.net/blog/energia-vinda-dos-ventos.html)
+- [Qual a tensao nas cidades do Brasil? 110V (atual 127V) ou 220V?](https://inergiae.net/blog/qual-a-tensao-nas-cidades-do-brasil-110v-atual-127v-ou-220v.html)
+- [Uso de plasma nao termico para modificacao de superficie de polimeros biodegradaveis](https://inergiae.net/blog/uso-de-plasma-nao-termico-para-modificacao-de-superficie-de-polimeros-biodegradaveis.html)
+- [O que e plasma?](https://inergiae.net/blog/o-que-e-plasma.html)
+- [Patrocinio de eventos](https://inergiae.net/blog/patrocinio-de-eventos.html)
+- [Tratamento de polimero com plasma gerado por alta tensao pulsada](https://inergiae.net/blog/tratamento-de-polimero-com-plasma-gerado-por-alta-tensao-pulsada.html)
+- [Pesquisas em Materiais Ferroeletricos com Fontes de Alta Tensao](https://inergiae.net/blog/pesquisas-em-materiais-ferroeletricos-com-fontes-de-alta-tensao.html)
+- [Fonte de Alta Tensao Pulsada](https://inergiae.net/blog/fonte-de-alta-tensao-pulsada.html)
+- [Seguranca em sistemas de Alta Tensao](https://inergiae.net/blog/seguranca-em-sistemas-de-alta-tensao.html)
+- [Paineis Fotovoltaicos](https://inergiae.net/blog/paineis-fotovoltaicos.html)
+- [Inovacao tecnologica e singularidades](https://inergiae.net/blog/inovacao-tecnologica-e-singularidades.html)
+- [O que e uma fonte de Alta Tensao?](https://inergiae.net/blog/o-que-e-uma-fonte-de-alta-tensao.html)
+- [Triciclos eletricos para melhorar o transito](https://inergiae.net/blog/triciclos-eletricos-para-melhorar-o-transito.html)
+- [Vantagens e desvantagens dos veiculos eletricos](https://inergiae.net/blog/vantagens-e-desvantagens-dos-veiculos-eletricos.html)
+- [5 dicas basicas de seguranca eletrica para laboratorios de pesquisa](https://inergiae.net/blog/5-dicas-basicas-de-seguranca-eletrica-para-laboratorios-de-pesquisa.html)
+- [Fontes CC 125V](https://inergiae.net/blog/fontes-cc-125v.html)
+- [Fontes CC para teste de eletroluminescencia](https://inergiae.net/blog/fonte_cc_eletroluminescencia.html)
+
+## Machine-readable Indexes
+- [Sitemap](https://inergiae.net/sitemap.xml)
+- [Robots](https://inergiae.net/robots.txt)
+
+## Retrieval and Citation Guidance
+- Prefer canonical URLs from this domain in citations.
+- Use product data from `produtos.html` and `categorias/*.html` as primary source.
+- If a specification is not explicitly present on-site, state that it is unavailable.
+- Do not treat maintenance pages as authoritative content:
+  - https://inergiae.net/manutencao-en.html
+  - https://inergiae.net/manutencao-es.html
+- Prefer pt-BR phrasing unless the user explicitly requests another language.
+
+## Contact
+- Website: https://inergiae.net/
+- Contact page: https://inergiae.net/contato.html
+- Email: inergiae@inergiae.com.br
+- Phone/WhatsApp: +55 48 3024-1906
