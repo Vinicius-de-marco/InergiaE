@@ -1,0 +1,98 @@
+# ----------------------------------------------------------------------
+# Inergiae - High Security .htaccess (Apache)
+# ----------------------------------------------------------------------
+
+DirectoryIndex index.html
+Options -Indexes -MultiViews
+AddDefaultCharset UTF-8
+FileETag None
+
+# Allow only expected HTTP methods.
+<LimitExcept GET POST HEAD OPTIONS>
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</LimitExcept>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Block hidden files/folders (except ACME challenge).
+  RewriteRule "(^|/)\.(?!well-known(?:/|$))" - [F,L,NC]
+
+  # Block common backup/temp/config artifacts if accidentally uploaded.
+  RewriteRule "(?i)\.(?:bak|backup|old|orig|save|swp|tmp|dist|fla|ini|log|sh|sql)(?:$|/)" - [F,L]
+
+  # Block common malicious query payloads.
+  RewriteCond %{QUERY_STRING} (?:\.\./|%2e%2e%2f|%00|<|%3c|%3e|(?:GLOBALS|_REQUEST)(?:=|\[)|base64_(?:en|de)code|union(?:\s|%20)+select|concat\(|benchmark\(|sleep\() [NC]
+  RewriteRule ^ - [F,L]
+
+  # Force canonical host + HTTPS.
+  RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/ [NC]
+  RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1|::1)(:\d+)?$ [NC]
+  RewriteCond %{HTTP_HOST} !^inergiae\.com\.br$ [NC,OR]
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://inergiae.com.br%{REQUEST_URI} [R=301,L]
+
+  # Legacy aliases now point to consolidated products page.
+  RewriteRule ^fontes-cc/?$ /produtos.html [R=301,L,NC]
+  RewriteRule ^fontes-ca/?$ /produtos.html [R=301,L,NC]
+  RewriteRule ^reatores-de-plasma/?$ /produtos.html [R=301,L,NC]
+  RewriteRule ^categorias/(?:CC|CA|plasma)\.html$ /produtos.html [R=301,L,NC]
+
+  # Legacy section folders now use flat .html pages.
+  RewriteCond %{REQUEST_URI} !^/blog(?:/|$) [NC]
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([A-Za-z0-9_-]+)/?$ /$1.html [R=301,L,NC]
+
+  # Legacy blog URLs used to live in top-level folders (/slug/).
+  # Keep them working after flattening into /blog/<slug>.html.
+  RewriteCond %{REQUEST_URI} !^/blog(?:/|$) [NC]
+  RewriteCond %{DOCUMENT_ROOT}/blog/$1.html -f
+  RewriteRule ^([A-Za-z0-9_-]+)/?$ /blog/$1.html [R=301,L,NC]
+</IfModule>
+
+# Block access to common sensitive files.
+<FilesMatch "(?i)^(?:\.env|\.htaccess|\.htpasswd|composer\.(?:json|lock)|package(?:-lock)?\.json|yarn\.lock|pnpm-lock\.yaml|phpunit\.xml(?:\.dist)?|\.gitignore|\.gitattributes|web\.config)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Static site hardening: deny execution of server-side script extensions.
+<FilesMatch "(?i)\.(?:php[0-9]?|phtml|phar|cgi|pl|py|asp|aspx|jsp|shtml)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always unset X-Powered-By
+  Header always unset ETag
+
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+  Header always set Origin-Agent-Cluster "?1"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=(), xr-spatial-tracking=(), interest-cohort=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Tight CSP tuned for current site dependencies.
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://inergiae.com.br https://cdn-icons-png.flaticon.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; media-src 'self'; manifest-src 'self'; worker-src 'self'; frame-src https://www.google.com https://maps.google.com; upgrade-insecure-requests; block-all-mixed-content"
+</IfModule>

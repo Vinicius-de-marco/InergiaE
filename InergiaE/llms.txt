@@ -4,7 +4,7 @@
 Inergiae develops static converters, high-voltage power supplies, pulsed AC supplies, and plasma reactors for industrial and scientific applications.
 This file defines preferred sources, current product lineup, and citation guidance for LLM systems.
 
-Last updated: 2026-02-19
+Last updated: 2026-02-26
 Primary language: pt-BR
 
 ## Canonical Domain
@@ -22,6 +22,7 @@ Primary language: pt-BR
 
 ## Key Pages
 - [Home](https://inergiae.com.br/)
+- [Aplicacoes](https://inergiae.com.br/aplicacoes.html)
 - [Empresa](https://inergiae.com.br/empresa.html)
 - [Produtos](https://inergiae.com.br/produtos.html)
 - [Categoria Fontes CC](https://inergiae.com.br/categorias/CC.html)

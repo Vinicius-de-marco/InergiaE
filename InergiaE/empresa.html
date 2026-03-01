@@ -35,7 +35,8 @@
 
     <title>Empresa - Inergiae Conversores Estáticos</title>
     <link rel="icon" type="image/png" href="img/logo_inergiae2.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260301">
+    <link rel="stylesheet" href="empresa.css?v=20260301">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
@@ -70,7 +71,7 @@
             ]
         }
     </script>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=20260301" defer></script>
 </head>
 
 <body>
@@ -248,7 +249,7 @@
                         <p>Lançamento da fonte de bancada modelo GEN. Contrato com concessionária de energia para
                             desenvolvimento de microinversor fotovoltaico.</p>
                         <div class="timeline-image">
-                            <img src="https://inergiae.com.br/wp-content/uploads/2022/02/Gen-1.jpg" alt="Modelo GEN">
+                            <img src="img/Gen-1.jpg" alt="Modelo GEN">
                         </div>
                     </div>
                 </div>
@@ -278,7 +279,7 @@
                         <p>Destaque no cenário nacional pela variedade de produtos e elevada tensão/potência dos
                             equipamentos. Forte presença em universidades e centros de pesquisa.</p>
                         <div class="timeline-image">
-                            <img src="https://inergiae.com.br/wp-content/uploads/2022/02/inergiae-o-que-e-plasma-800x450-1.jpg"
+                            <img src="img/inergiae-o-que-e-plasma-800x450-1.jpg"
                                 alt="Plasma">
                         </div>
                     </div>
@@ -339,46 +340,107 @@
             <h2 class="section-title">Aplicações dos Nossos Produtos</h2>
             <p class="section-subtitle">Nossos conversores são utilizados em diversas áreas da indústria e pesquisa</p>
 
-            <div class="applications-categories">
-                <div class="app-category">
-                    <h3>Aplicações Principais</h3>
-                    <ul class="app-list">
-                        <li>Raio Laser</li>
-                        <li>Reatores de Plasma</li>
-                        <li>Válvula TWT</li>
-                        <li>Gerador de Ozônio</li>
-                        <li>Eletrofiação</li>
-                        <li>Processos Químicos</li>
-                        <li>Raio-X</li>
-                        <li>Eletrólise</li>
-                    </ul>
-                </div>
-
-                <div class="app-category">
-                    <h3>Pesquisa e Desenvolvimento</h3>
-                    <ul class="app-list">
-                        <li>Polarização de Piezoelétricos</li>
-                        <li>Tocha de Plasma</li>
-                        <li>Tratamento Superficial de Polímeros</li>
-                        <li>Lâmpadas de Arco Voltaico</li>
-                        <li>Teste de Isolação (Hi-Pot)</li>
-                        <li>Eletroforese Capilar</li>
-                        <li>Tubo de Raios Catódicos</li>
-                    </ul>
-                </div>
-
-                <div class="app-category">
-                    <h3>Aplicações Industriais</h3>
-                    <ul class="app-list">
-                        <li>Electron Multiplier</li>
-                        <li>Geradores de Corona</li>
-                        <li>Deposição Assistida por Plasma (PECVD)</li>
-                        <li>Eletroporação</li>
-                        <li>Pulverização Eletrostática</li>
-                        <li>Geradores de Impulso</li>
-                        <li>Magnetron Industrial</li>
-                    </ul>
-                </div>
+            <div class="applications-filter-grid">
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#raio-laser">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Raio Laser</span>
+                </a>
+                <a class="app-filter-card" data-app-category="plasma" href="aplicacoes.html#reatores-de-plasma">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Reatores de Plasma</span>
+                </a>
+                <a class="app-filter-card" data-app-category="ca" href="aplicacoes.html#valvula-twt">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Válvula TWT</span>
+                </a>
+                <a class="app-filter-card" data-app-category="ca" href="aplicacoes.html#ozonizacao">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Gerador de Ozônio</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#eletrofiacao">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Eletrofiação</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#simulador-de-bateria">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Simulador de Bateria</span>
+                </a>
+                <a class="app-filter-card" data-app-category="ca" href="aplicacoes.html#processos-quimicos">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Processos Químicos</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#raio-x">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Raio-X</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#eletrolise">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Eletrólise</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#polarizacao-de-piezoeletricos">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Polarização de Piezoelétricos</span>
+                </a>
+                <a class="app-filter-card" data-app-category="ca" href="aplicacoes.html#tocha-de-plasma">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Tocha de Plasma</span>
+                </a>
+                <a class="app-filter-card" data-app-category="plasma" href="aplicacoes.html#tratamento-superficial-de-polimeros">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Tratamento Superficial de Polímeros</span>
+                </a>
+                <a class="app-filter-card" data-app-category="ca" href="aplicacoes.html#lampadas-de-arco-voltaico">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Lâmpadas de Arco Voltaico</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#teste-de-isolacao">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Teste de Isolação ("hi-pot")</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#carregamento-de-bateria">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Carregamento de Bateria</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#geracao-de-hidrogenio">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Geração de Hidrogênio</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#eletroforese">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Eletroforese Capilar</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#tubo-de-raios-catodicos">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Tubo de Raios Catódicos</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#electron-multiplier">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">"Electron Multiplier"</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#geradores-de-corona">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Geradores de Corona</span>
+                </a>
+                <a class="app-filter-card" data-app-category="ca" href="aplicacoes.html#deposicao-assistida-por-plasma-pecvd">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Deposição Assistida por Plasma (PECVD)</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#eletroporacao">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Eletroporação</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#pulverizacao-eletrostatica">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Pulverização Eletrostática</span>
+                </a>
+                <a class="app-filter-card" data-app-category="ca" href="aplicacoes.html#geradores-de-impulso">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Geradores de Impulso</span>
+                </a>
+                <a class="app-filter-card" data-app-category="cc" href="aplicacoes.html#magnetron-industrial">
+                    <span class="app-filter-icon">✓</span>
+                    <span class="app-filter-label">Magnetron Industrial</span>
+                </a>
             </div>
         </section>
 
@@ -478,40 +540,22 @@
 
             <div class="partners-showcase">
                 <div class="partner-item">
-                    <img src="img/labmatUFSC-150x150-1.png"
-                        alt="LabMat UFSC">
-                </div>
-                <div class="partner-item">
-                    <img src="img/pucSP-285x175-1-150x92-1.png"
-                        alt="PUC SP">
-                </div>
-                <div class="partner-item">
-                    <img src="img/unifesp-150x150-1.png" alt="UNIFESP">
-                </div>
-                <div class="partner-item">
-                    <img src="img/ifscUSP-150x150-1.png" alt="USP">
-                </div>
-                <div class="partner-item">
-                    <img src="img/senaiCimatec-150x150-1.png"
-                        alt="SENAI">
-                </div>
-                <div class="partner-item">
-                    <img src="img/ufrn-150x150-1.png" alt="UFRN">
-                </div>
-                <div class="partner-item">
-                    <img src="img/unisul-150x150-1.png" alt="UNISUL">
-                </div>
-                <div class="partner-item">
-                    <img src="img/sociesc-150x150-1.png" alt="SOCIESC">
-                </div>
-                <div class="partner-item">
-                    <img src="img/instor150.png" alt="Instor">
-                </div>
-                <div class="partner-item">
                     <img src="img/aratu-150x150-1.png" alt="Aratu">
                 </div>
                 <div class="partner-item">
+                    <img src="img/caltec150.jpg" alt="Caltec">
+                </div>
+                <div class="partner-item">
+                    <img src="img/celesc150.png" alt="CELESC">
+                </div>
+                <div class="partner-item">
                     <img src="img/crbstch-150x150-1.png" alt="CRBS">
+                </div>
+                <div class="partner-item">
+                    <img src="img/dbm.png" alt="DBM Eletrotech">
+                </div>
+                <div class="partner-item partner-item-text">
+                    <span>Engeper</span>
                 </div>
                 <div class="partner-item">
                     <img src="img/fapesc-150x150-1.png" alt="FAPESC">
@@ -526,25 +570,46 @@
                     <img src="img/ibepe-150x150-1.png" alt="IBEPE">
                 </div>
                 <div class="partner-item">
-                    <img src="img/caltec150.jpg" alt="Caltec">
+                    <img src="img/Logo-Inep.png" alt="INEP">
+                </div>
+                <div class="partner-item">
+                    <img src="img/instor150.png" alt="Instor">
                 </div>
                 <div class="partner-item">
                     <img src="img/interclima-150x150-1.png" alt="Interclima">
                 </div>
                 <div class="partner-item">
+                    <img src="img/LabInovacaoUFSC-150x150-1.png" alt="Lab Inovacao UFSC">
+                </div>
+                <div class="partner-item">
+                    <img src="img/labmatUFSC-150x150-1.png" alt="LabMat UFSC">
+                </div>
+                <div class="partner-item">
                     <img src="img/logocarbono4-150x94-1.jpg" alt="Logocarbono">
+                </div>
+                <div class="partner-item">
+                    <img src="img/pucSP-285x175-1-150x92-1.png" alt="PUC SP">
                 </div>
                 <div class="partner-item">
                     <img src="img/robotech-150x150-1.png" alt="Robotech">
                 </div>
                 <div class="partner-item">
-                    <img src="img/LabInovacaoUFSC-150x150-1.png" alt="Lab Inovacao UFSC">
+                    <img src="img/senaiCimatec-150x150-1.png" alt="SENAI">
                 </div>
                 <div class="partner-item">
-                    <img src="img/celesc150.png" alt="CELESC">
+                    <img src="img/sociesc-150x150-1.png" alt="SOCIESC">
                 </div>
                 <div class="partner-item">
-                    <img src="img/Logo-Inep.png" alt="INEP">
+                    <img src="img/ufrn-150x150-1.png" alt="UFRN">
+                </div>
+                <div class="partner-item">
+                    <img src="img/unifesp-150x150-1.png" alt="UNIFESP">
+                </div>
+                <div class="partner-item">
+                    <img src="img/unisul-150x150-1.png" alt="UNISUL">
+                </div>
+                <div class="partner-item">
+                    <img src="img/ifscUSP-150x150-1.png" alt="USP">
                 </div>
             </div>
         </section>

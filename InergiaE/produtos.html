@@ -30,9 +30,9 @@
 
     <title>Produtos - Inergiae Conversores Estáticos</title>
     <link rel="icon" type="image/png" href="img/logo_inergiae2.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="categorias/categoria.css">
-    <link rel="stylesheet" href="produtos.css">
+    <link rel="stylesheet" href="style.css?v=20260301">
+    <link rel="stylesheet" href="produtos-base.css?v=20260301">
+    <link rel="stylesheet" href="produtos.css?v=20260301">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
@@ -67,7 +67,7 @@
             ]
         }
     </script>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=20260301" defer></script>
 </head>
 
 <body>
@@ -118,7 +118,7 @@
         <div class="hero-content">
             <a href="index.html" class="back-link">← Voltar ao Início</a>
             <h1>Todos os Nossos Produtos</h1>
-            <p>Fontes de alta tensão, corrente alternada e reatores de plasma — tecnologia nacional para indústria e pesquisa</p>
+            <p>Fontes de alta tensão e alta corrente, fontes CA/pulsadas e reatores de plasma para indústria e pesquisa</p>
         </div>
     </section>
 
@@ -127,10 +127,11 @@
         <div class="intro-box">
             <h2>Catálogo Completo</h2>
             <p>Conheça todas as linhas de produtos da Inergiae: fontes de corrente contínua (CC), fontes de corrente alternada e pulsadas (CA) e reatores de plasma. Soluções customizadas para aplicações industriais e científicas.</p>
+            <p class="intro-app-link">Mapeamento completo de usos técnicos em <a href="aplicacoes.html">Aplicações Industriais e Científicas</a>.</p>
             <div class="stats-mini">
                 <div class="stat-mini">
                     <span class="stat-num">3</span>
-                    <span class="stat-label">Categorias</span>
+                    <span class="stat-label">Linhas</span>
                 </div>
                 <div class="stat-mini">
                     <span class="stat-num">10</span>
@@ -143,35 +144,37 @@
             </div>
         </div>
 
-        <!-- Navegação por categoria -->
-        <section class="category-nav-produtos">
-            <p class="category-nav-title">Navegar por categoria</p>
+        <section class="category-nav-produtos" aria-label="Filtrar linhas de produtos">
+            <p class="category-nav-title">Filtrar por linha</p>
             <div class="category-nav-grid">
-                <a href="categorias/CC.html" class="category-nav-card category-nav-cc">
+                <button type="button" class="category-nav-card category-nav-cc" data-product-filter="cc"
+                    aria-controls="produtos" aria-pressed="false">
                     <span class="category-nav-icon" aria-hidden="true">⚡</span>
-                    <span class="category-nav-name">Fontes CC</span>
-                    <span class="category-nav-desc">Corrente contínua · Alta tensão</span>
-                    <span class="category-nav-arrow">Ver produtos →</span>
-                </a>
-                <a href="categorias/CA.html" class="category-nav-card category-nav-ca">
+                    <span class="category-nav-name">Somente Fontes CC</span>
+                    <span class="category-nav-desc">Alta e baixa tensão · Tensão máxima de 80kV</span>
+                    <span class="category-nav-arrow">Filtrar produtos →</span>
+                </button>
+                <button type="button" class="category-nav-card category-nav-ca" data-product-filter="ca"
+                    aria-controls="produtos" aria-pressed="false">
                     <span class="category-nav-icon" aria-hidden="true">〰</span>
-                    <span class="category-nav-name">Fontes CA</span>
-                    <span class="category-nav-desc">Alternada e pulsada</span>
-                    <span class="category-nav-arrow">Ver produtos →</span>
-                </a>
-                <a href="categorias/plasma.html" class="category-nav-card category-nav-plasma">
+                    <span class="category-nav-name">Fontes CA / Pulsadas</span>
+                    <span class="category-nav-desc">Frequência máxima de 20kHz a 100 kHz, dependendo do modelo</span>
+                    <span class="category-nav-arrow">Filtrar produtos →</span>
+                </button>
+                <button type="button" class="category-nav-card category-nav-plasma" data-product-filter="plasma"
+                    aria-controls="produtos" aria-pressed="false">
                     <span class="category-nav-icon" aria-hidden="true">✦</span>
                     <span class="category-nav-name">Reatores de Plasma</span>
                     <span class="category-nav-desc">Tecnologia de plasma</span>
-                    <span class="category-nav-arrow">Ver produtos →</span>
-                </a>
+                    <span class="category-nav-arrow">Filtrar produtos →</span>
+                </button>
             </div>
         </section>
 
-        <div class="products-grid">
+        <div class="products-grid" id="produtos" data-filterable-products>
 
             <!-- ========== FONTES CC ========== -->
-            <div class="product-item">
+            <div class="product-item" data-product-line="cc">
                 <div class="product-img">
                     <img src="img/produtos/oficial/reduci.png" alt="REDUCI">
                     <span class="tag">Fontes CC</span>
@@ -192,11 +195,11 @@
                         <li>Excelente estabilidade em uso contínuo</li>
                         <li>Gabinete em alumínio para maior durabilidade</li>
                     </ul>
-                    <a href="categorias/CC.html" class="btn-prod">Ver na categoria CC</a>
+                    <a href="contato.html?produto=REDUCI#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
-            <div class="product-item">
+            <div class="product-item" data-product-line="cc">
                 <div class="product-img">
                     <img src="img/produtos/oficial/tron.png" alt="TRON">
                     <span class="tag">Fontes CC</span>
@@ -218,11 +221,11 @@
                         <li>Pré-aquecimento do filamento por 5s</li>
                         <li>Interface de comunicação RS-232 isolada</li>
                     </ul>
-                    <a href="categorias/CC.html" class="btn-prod">Ver na categoria CC</a>
+                    <a href="contato.html?produto=TRON#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
-            <div class="product-item">
+            <div class="product-item" data-product-line="cc">
                 <div class="product-img">
                     <img src="img/produtos/oficial/apis.png" alt="ÁPIS">
                     <span class="tag">Fontes CC</span>
@@ -244,11 +247,11 @@
                         <li>Entrada do tipo "contato seco" para liberar a tensão de saída</li>
                         <li>Gabinete próprio para rack 19", altura 4U</li>
                     </ul>
-                    <a href="categorias/CC.html" class="btn-prod">Ver na categoria CC</a>
+                    <a href="contato.html?produto=%C3%81PIS#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
-            <div class="product-item">
+            <div class="product-item" data-product-line="cc">
                 <div class="product-img">
                     <img src="img/produtos/oficial/gen.png" alt="GEN">
                     <span class="tag">Fontes CC</span>
@@ -271,11 +274,11 @@
                         <li>Configuração do modo de operação por "dip-switch"</li>
                         <li>Gabinete próprio para rack 19"</li>
                     </ul>
-                    <a href="categorias/CC.html" class="btn-prod">Ver na categoria CC</a>
+                    <a href="contato.html?produto=GEN#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
-            <div class="product-item">
+            <div class="product-item" data-product-line="cc">
                 <div class="product-img">
                     <img src="img/produtos/oficial/quiescis.png" alt="QUIESCIS">
                     <span class="tag">Fontes CC</span>
@@ -296,11 +299,11 @@
                         <li>Excelente estabilidade em uso contínuo</li>
                         <li>Gabinete em alumínio para maior durabilidade</li>
                     </ul>
-                    <a href="categorias/CC.html" class="btn-prod">Ver na categoria CC</a>
+                    <a href="contato.html?produto=QUIESCIS#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
-            <div class="product-item">
+            <div class="product-item" data-product-line="cc">
                 <div class="product-img">
                     <img src="img/produtos/oficial/collis.png" alt="COLLIS">
                     <span class="tag">Fontes CC</span>
@@ -324,11 +327,11 @@
                         <li>Configuração do modo de operação por "dip-switch"</li>
                         <li>Possibilidade de alteração da polaridade (sob consulta)</li>
                     </ul>
-                    <a href="categorias/CC.html" class="btn-prod">Ver na categoria CC</a>
+                    <a href="contato.html?produto=COLLIS#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
-            <div class="product-item">
+            <div class="product-item" data-product-line="cc">
                 <div class="product-img">
                     <img src="img/produtos/oficial/laser_hv_em_breve.svg" alt="LASER HV">
                     <span class="tag">Fontes CC</span>
@@ -350,12 +353,12 @@
                         <li>Refrigeração forçada com ventilador com rolamentos</li>
                         <li>Dimensões 22 x 30 x 15cm (largura x comprimento x altura)</li>
                     </ul>
-                    <a href="categorias/CC.html" class="btn-prod">Ver na categoria CC</a>
+                    <a href="contato.html?produto=LASER%20HV#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
             <!-- ========== FONTES CA ========== -->
-            <div class="product-item">
+            <div class="product-item" data-product-line="ca">
                 <div class="product-img">
                     <img src="img/produtos/oficial/alternis.png" alt="ALTERNIS">
                     <span class="tag">Fontes CA</span>
@@ -375,11 +378,11 @@
                         <li>Potência de saída de até 200W rms</li>
                         <li>Sensor de sobre-temperatura</li>
                     </ul>
-                    <a href="categorias/CA.html" class="btn-prod">Ver na categoria CA</a>
+                    <a href="contato.html?produto=ALTERNIS#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
-            <div class="product-item">
+            <div class="product-item" data-product-line="ca">
                 <div class="product-img">
                     <img src="img/produtos/oficial/drum.png" alt="DRUM">
                     <span class="tag">Fontes CA</span>
@@ -401,12 +404,12 @@
                         <li>Controle do Duty Cycle entre 10% e 90%</li>
                         <li>Controle por tensão ou por corrente</li>
                     </ul>
-                    <a href="categorias/CA.html" class="btn-prod">Ver na categoria CA</a>
+                    <a href="contato.html?produto=DRUM#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 
             <!-- ========== PLASMA ========== -->
-            <div class="product-item">
+            <div class="product-item" data-product-line="plasma">
                 <div class="product-img">
                     <img src="img/produtos/oficial/matrix.png" alt="MATRIX">
                     <span class="tag">Plasma</span>
@@ -426,7 +429,7 @@
                         <li>Componentes em Teflon</li>
                         <li>Câmara em acrílico transparente, com aberturas</li>
                     </ul>
-                    <a href="categorias/plasma.html" class="btn-prod">Ver na categoria Plasma</a>
+                    <a href="contato.html?produto=MATRIX#form-orcamento" class="btn-prod">Solicitar Orçamento</a>
                 </div>
             </div>
 

@@ -1,159 +1,139 @@
-.manutencao-page {
-    min-height: calc(100vh - 270px);
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #1f1f1f 0%, #2d2d2d 100%);
+.hero-aplicacoes {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    padding: 60px 40px;
     position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.manutencao-page::before {
+.hero-aplicacoes::before {
     content: '';
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 40%, rgba(255, 215, 0, 0.16) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.12) 0%, transparent 45%);
+        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 52%);
 }
 
-.manutencao-card {
+.hero-aplicacoes-content {
+    max-width: 1400px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
-    max-width: 760px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 48px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-    text-align: center;
 }
 
-.manutencao-label {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
-    color: var(--text-dark);
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.3px;
-    padding: 8px 16px;
-    border-radius: 999px;
-    margin-bottom: 24px;
-}
-
-.manutencao-card h1 {
+.hero-aplicacoes h1 {
     font-family: 'Playfair Display', serif;
     font-size: 48px;
-    color: var(--text-dark);
-    margin-bottom: 14px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.manutencao-card p {
-    color: var(--text-light);
-    font-size: 17px;
-    line-height: 1.8;
+.hero-aplicacoes p {
+    font-size: 18px;
+    color: #d0d0d0;
+}
+
+.applications-intro {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    margin-bottom: 36px;
+}
+
+.applications-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
     margin-bottom: 12px;
-}
-
-.manutencao-note {
-    font-weight: 600;
     color: var(--text-dark);
 }
 
-.manutencao-actions {
-    margin-top: 30px;
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-    flex-wrap: wrap;
+.applications-intro p {
+    color: var(--text-light);
+    line-height: 1.7;
 }
 
-.btn-primary,
-.btn-secondary {
+.applications-group {
+    margin-bottom: 46px;
+}
+
+.applications-group h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.application-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    border: 1px solid #efefef;
+    scroll-margin-top: 120px;
+}
+
+.application-card h3 {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.application-card p {
+    color: var(--text-light);
+    line-height: 1.65;
+    margin-bottom: 14px;
+    min-height: 78px;
+}
+
+.application-card a {
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
+    color: var(--text-dark);
     font-weight: 700;
+    font-size: 13px;
     text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    padding: 14px 22px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.btn-primary {
+    letter-spacing: 0.8px;
     background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
-    color: var(--text-dark);
+    padding: 10px 14px;
+    border-radius: 999px;
 }
 
-.btn-secondary {
-    border: 2px solid var(--text-dark);
-    color: var(--text-dark);
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+.application-card a:hover {
+    filter: brightness(1.03);
 }
 
 @media (max-width: 768px) {
-    .manutencao-page {
-        min-height: auto;
-        padding: 50px 16px;
+    .hero-aplicacoes {
+        padding: 44px 18px;
     }
 
-    .manutencao-card {
-        padding: 28px 20px;
+    .hero-aplicacoes h1 {
+        font-size: 32px;
     }
 
-    .manutencao-card h1 {
-        font-size: 33px;
+    .hero-aplicacoes p {
+        font-size: 16px;
     }
 
-    .manutencao-card p {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .manutencao-page {
-        padding: 40px 12px;
+    .applications-intro {
+        padding: 24px 18px;
     }
 
-    .manutencao-card {
-        border-radius: 16px;
-        padding: 22px 14px;
-    }
-
-    .manutencao-label {
-        font-size: 10px;
-        letter-spacing: 1px;
-        padding: 6px 12px;
-        margin-bottom: 18px;
-    }
-
-    .manutencao-card h1 {
+    .applications-intro h2,
+    .applications-group h2 {
         font-size: 28px;
     }
 
-    .manutencao-card p {
-        font-size: 14px;
-        line-height: 1.65;
-    }
-
-    .manutencao-actions {
-        margin-top: 22px;
-        gap: 10px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        padding: 12px 14px;
-        font-size: 11px;
-        text-align: center;
+    .application-card p {
+        min-height: auto;
     }
 }
 

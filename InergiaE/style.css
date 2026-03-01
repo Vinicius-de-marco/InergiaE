@@ -19,6 +19,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-dark);
     background-color: var(--bg-light);
+    overflow-x: hidden;
 }
 
 
@@ -55,11 +56,18 @@ header {
     gap: 40px;
 }
 
+.header-container>a[aria-label] {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
 /* Logo */
 .logo {
     height: 58px;
     width: auto;
-    margin-left: -250px;
+    max-width: 100%;
+    margin-left: 0;
     transition: transform 0.3s ease;
     cursor: pointer;
     display: block;
@@ -304,6 +312,20 @@ nav a:hover::before {
     padding: 60px 40px;
 }
 
+.reveal-item {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+    filter: blur(2px);
+    transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), filter 0.65s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
 /* Introdução */
 .intro-section {
     text-align: center;
@@ -344,6 +366,7 @@ nav a:hover::before {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     margin-bottom: 80px;
+    align-items: stretch;
 }
 
 .category-card {
@@ -353,6 +376,9 @@ nav a:hover::before {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .category-card:hover {
@@ -362,12 +388,13 @@ nav a:hover::before {
 
 /* Badge no topo do card */
 .category-badge {
-    display: inline-block;
-    margin: 14px 20px 0;
+    display: block;
+    width: 100%;
+    margin: 0;
     background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
     color: var(--text-dark);
-    padding: 8px 14px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 20px 20px 0 0;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -401,24 +428,60 @@ nav a:hover::before {
 
 /* Imagem da categoria */
 .category-image {
-    padding: 30px;
-    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    padding: 20px;
+    background: linear-gradient(145deg, #f7f7f7 0%, #ffffff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 250px;
     min-height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-image::before {
+    content: '';
+    position: absolute;
+    inset: 14px;
+    border-radius: 16px;
+    background: linear-gradient(155deg, #ffffff 0%, #f0f1f4 100%);
+    border: 1px solid #e6e9ef;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 14px 26px rgba(0, 0, 0, 0.08);
+}
+
+.category-image::after {
+    content: '';
+    position: absolute;
+    inset: 14px;
+    border-radius: 16px;
+    background: radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.7) 0%, transparent 45%);
+    pointer-events: none;
 }
 
 .category-image img {
+    position: relative;
+    z-index: 1;
+    display: block;
     max-width: 100%;
+    width: 100%;
     height: auto;
-    max-height: 220px;
+    max-height: 205px;
     object-fit: contain;
+    filter: drop-shadow(0 16px 20px rgba(36, 42, 54, 0.18));
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: translateY(-3px) scale(1.04);
+    filter: drop-shadow(0 22px 28px rgba(36, 42, 54, 0.26));
 }
 
 /* Corpo da categoria */
 .category-body {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .category-body>p {
@@ -426,6 +489,7 @@ nav a:hover::before {
     line-height: 1.7;
     color: var(--text-dark);
     margin-bottom: 25px;
+    min-height: 160px;
 }
 
 /* Especificações técnicas */
@@ -435,6 +499,7 @@ nav a:hover::before {
     background: #f8f9fa;
     border-radius: 10px;
     border-left: 4px solid var(--primary-yellow);
+    flex: 1;
 }
 
 .tech-specs h4 {
@@ -459,6 +524,15 @@ nav a:hover::before {
     font-size: 12px;
     font-weight: 500;
     border: 1px solid #e0e0e0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spec-tag:hover {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.2);
 }
 
 /* Características em destaque */
@@ -466,13 +540,14 @@ nav a:hover::before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin: 25px 0;
+    margin: 25px 0 20px;
 }
 
 .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     padding: 15px;
     background: #f8f9fa;
     border-radius: 10px;
@@ -480,7 +555,9 @@ nav a:hover::before {
 }
 
 .feature-icon {
+    display: block;
     font-size: 24px;
+    line-height: 1;
     margin-bottom: 8px;
 }
 
@@ -505,12 +582,92 @@ nav a:hover::before {
     letter-spacing: 2px;
     border-radius: 8px;
     transition: all 0.3s ease;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .btn-explore:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.applications-index-cta {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 36px 26px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fff8d7 0%, #ffffff 100%);
+    border: 1px solid #f0e6b6;
+    text-align: center;
+}
+
+.applications-index-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.applications-index-cta p {
+    color: var(--text-light);
+    max-width: 860px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+}
+
+.btn-all-applications {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
+    border-radius: 999px;
+    padding: 14px 26px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+}
+
+.btn-all-applications:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 22px rgba(255, 215, 0, 0.35);
+    filter: brightness(1.02);
+}
+
+.btn-explore,
+.btn-all-posts,
+.btn-cta,
+.btn-all-applications {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn-explore::before,
+.btn-all-posts::before,
+.btn-cta::before,
+.btn-all-applications::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.38) 50%, transparent 100%);
+    transform: translateX(-130%);
+    transition: transform 0.7s ease;
+    pointer-events: none;
+}
+
+.btn-explore:hover::before,
+.btn-all-posts:hover::before,
+.btn-cta:hover::before,
+.btn-all-applications:hover::before {
+    transform: translateX(130%);
+}
+
+.btn-explore:focus-visible,
+.btn-all-posts:focus-visible,
+.btn-cta:focus-visible,
+.btn-all-applications:focus-visible {
+    outline: 3px solid rgba(255, 215, 0, 0.45);
+    outline-offset: 2px;
 }
 
 /* SEÇÃO DE DIFERENCIAIS  */
@@ -1267,6 +1424,14 @@ footer::before {
     opacity: 1;
 }
 
+.partner-item-text span {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    opacity: 0.85;
+}
+
 /* CTA Final */
 .cta-section {
     margin: 100px 0;
@@ -1310,11 +1475,31 @@ footer::before {
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .reveal-item {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
+
+    .category-card:hover,
+    .blog-card:hover,
+    .differential-card:hover,
+    .partner-item:hover,
+    .btn-explore:hover,
+    .btn-all-posts:hover,
+    .btn-cta:hover,
+    .btn-all-applications:hover {
+        transform: none;
+    }
+}
+
 
 /* ==================== RESPONSIVO ==================== */
 @media (max-width: 1200px) {
     .header-container {
-        padding: 24px 28px 24px 48px;
+        padding: 24px 28px;
         gap: 28px;
     }
 
@@ -1362,7 +1547,7 @@ footer::before {
 
 @media (max-width: 992px) {
     .header-container {
-        padding: 20px 24px 20px 48px;
+        padding: 20px 24px;
         gap: 20px;
     }
 
@@ -1442,7 +1627,7 @@ footer::before {
 
     .logo {
         height: 44px;
-        margin-left: -250px;
+        margin-left: 0;
         margin-right: 0;
     }
 
@@ -1507,7 +1692,7 @@ footer::before {
 
     .menu-enhanced .logo {
         height: 40px;
-        margin-left: -250px;
+        margin-left: 0;
         margin-right: 0;
     }
 
@@ -1629,9 +1814,8 @@ footer::before {
     }
 
     .category-badge {
-        margin: 12px 14px 0;
         font-size: 9px;
-        padding: 6px 10px;
+        padding: 8px 14px;
         letter-spacing: 0.6px;
     }
 
@@ -1641,15 +1825,27 @@ footer::before {
 
     .category-image {
         padding: 20px;
+        height: 200px;
         min-height: 200px;
+    }
+
+    .category-image::before,
+    .category-image::after {
+        inset: 10px;
+        border-radius: 14px;
     }
 
     .category-body {
         padding: 20px;
     }
 
+    .category-body>p {
+        min-height: auto;
+    }
+
     .tech-specs {
         padding: 16px;
+        min-height: auto;
     }
 
     .category-features {
@@ -1670,6 +1866,16 @@ footer::before {
     .differentials-section {
         margin-top: 56px;
         padding: 36px 18px;
+    }
+
+    .applications-index-cta {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        padding: 28px 16px;
+    }
+
+    .applications-index-cta h2 {
+        font-size: 30px;
     }
 
     .differentials-section h2 {
@@ -1962,9 +2168,8 @@ footer::before {
     }
 
     .category-badge {
-        margin: 10px 12px 0;
         font-size: 9px;
-        padding: 5px 8px;
+        padding: 8px 12px;
     }
 
     .hero h1 {
@@ -1997,7 +2202,113 @@ footer::before {
     }
 
     .btn-all-posts,
-    .btn-cta {
+    .btn-cta,
+    .btn-all-applications {
         max-width: none;
+    }
+}
+
+
+/* TRANSICOES_ENFEITE_V2 */
+:root {
+    --ease-inergiae-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-inergiae-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a,
+.social-links a,
+.language-selector a,
+.menu-toggle span,
+.back-link,
+.blog-link,
+.read-more,
+.btn-explore,
+.btn-all-posts,
+.btn-cta,
+.btn-all-applications,
+.btn-prod,
+.btn-submit,
+.btn-panel,
+.btn-contact,
+.btn-contact.whatsapp,
+.btn-contact.email,
+.filter-btn,
+.product-filter-btn,
+.app-filter-btn,
+.spec-tag,
+.tag {
+    transition-duration: 0.32s;
+    transition-timing-function: var(--ease-inergiae-smooth);
+}
+
+nav a::before {
+    transition: width 0.34s var(--ease-inergiae-smooth), opacity 0.34s var(--ease-inergiae-soft);
+}
+
+.category-card,
+.blog-card,
+.product-item,
+.application-card,
+.app-filter-card,
+.category-nav-card,
+.differential-card,
+.differential-box,
+.mission-card,
+.highlight-card,
+.contact-form-card,
+.contact-info-panel,
+.partner-item,
+.timeline-content-box,
+.blog-article,
+.testimonial-card-new {
+    transition-property: transform, box-shadow, border-color, background-color, filter, opacity;
+    transition-duration: 0.42s;
+    transition-timing-function: var(--ease-inergiae-smooth);
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.category-image img,
+.blog-image img,
+.product-img img,
+.application-card img,
+.partner-item img {
+    transition-duration: 0.55s;
+    transition-timing-function: var(--ease-inergiae-smooth);
+}
+
+.reveal-item {
+    transition: opacity 0.72s var(--ease-inergiae-soft),
+        transform 0.72s var(--ease-inergiae-smooth),
+        filter 0.72s var(--ease-inergiae-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .category-card,
+    .blog-card,
+    .product-item,
+    .application-card,
+    .app-filter-card,
+    .category-nav-card,
+    .differential-card,
+    .differential-box,
+    .mission-card,
+    .highlight-card,
+    .contact-form-card,
+    .contact-info-panel,
+    .partner-item,
+    .timeline-content-box,
+    .blog-article,
+    .testimonial-card-new,
+    .reveal-item,
+    .category-image img,
+    .blog-image img,
+    .product-img img,
+    .application-card img,
+    .partner-item img {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
     }
 }

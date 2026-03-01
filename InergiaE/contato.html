@@ -31,8 +31,8 @@
     <title>Contato - Inergiae Conversores Estáticos</title>
     <link rel="icon" type="image/png" href="img/logo_inergiae2.png">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="style.css?v=20260301">
+    <link rel="stylesheet" href="contato.css?v=20260301">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
@@ -66,7 +66,7 @@
             ]
         }
     </script>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=20260301" defer></script>
 </head>
 
 <body>
@@ -120,7 +120,7 @@
             <p>Atendimento técnico e comercial para desenvolver a solução ideal para o seu projeto.</p>
             <div class="hero-contact-actions">
                 <a href="https://wa.me/554830241906" target="_blank" rel="noopener" class="btn-contact whatsapp">WhatsApp</a>
-                <a href="mailto:contato@inergiae.com.br" class="btn-contact email">Enviar E-mail</a>
+                <a href="#form-orcamento" class="btn-contact email">Solicitar por Formulário</a>
             </div>
         </div>
     </section>
@@ -139,7 +139,7 @@
                 <span class="highlight-icon">✉️</span>
                 <h2>E-mail</h2>
                 <p>inergiae@inergiae.com.br</p>
-                <a href="mailto:inergiae@inergiae.com.br">Enviar mensagem</a>
+                <a href="#form-orcamento">Enviar mensagem</a>
             </article>
 
             <article class="highlight-card">
@@ -156,10 +156,23 @@
                 <h2>Solicite um orçamento</h2>
                 <p>Descreva a sua necessidade e nossa equipe retornará com uma proposta técnica e comercial.</p>
 
-                <form class="contact-form" action="mailto:contato@inergiae.com.br" method="post" enctype="text/plain">
+                <form class="contact-form" action="https://formsubmit.co/inergiae@inergiae.com.br" method="post"
+                    data-async-form data-async-endpoint="https://formsubmit.co/ajax/inergiae@inergiae.com.br">
+                    <input type="hidden" name="_subject" value="Novo contato - Inergiae">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="/contato.html?enviado=1#form-orcamento">
+                    <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off"
+                        aria-hidden="true">
                     <div class="form-row">
                         <label for="produto">Produto de interesse</label>
-                        <input type="text" id="produto" name="Produto" placeholder="Ex.: REDUCI">
+                        <select id="produto" name="Produto" required>
+                            <option value="" selected disabled>Selecione o produto</option>
+                            <option value="Fonte CC">Fonte CC</option>
+                            <option value="Fonte CA">Fonte CA</option>
+                            <option value="Reator">Reator</option>
+                            <option value="outros">outros</option>
+                        </select>
                     </div>
 
                     <div class="form-row">
@@ -203,6 +216,7 @@
                     </div>
 
                     <button type="submit" class="btn-submit">Enviar Solicitação</button>
+                    <p class="form-feedback" role="status" aria-live="polite"></p>
                 </form>
             </article>
 
